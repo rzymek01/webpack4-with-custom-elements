@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode production --optimize-minimize=false --watch",
+    "start": "webpack --mode production --watch",
     "start:dev": "webpack --mode development --watch",
-    "run-server": "python -m http.server 8000",
+    "#run-server-bizarre-delays": "python -m http.server 8000",
+    "run-server": "http-server -p 8000",
     "test": "yarn jest"
   },
   "devDependencies": {
