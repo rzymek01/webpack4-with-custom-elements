@@ -12,7 +12,7 @@
     "transform-object-rest-spread",
     [
       "babel-plugin-transform-builtin-classes", {
-        "globals": ["HTMLElement"],
+        "globals": ["HTMLElement", "HTMLButtonElement"],
         "logIfPatched": true
       }
     ],

@@ -1,5 +1,5 @@
 // base class to extend, same trick as before
-class HTMLCustomElement extends HTMLElement {
+class HTMLCustomElement extends HTMLButtonElement {
     constructor(_) { return (_ = super(_)).init(), _; }
     init() { /* override as you like */ }
 }
@@ -13,6 +13,10 @@ export default class Task extends HTMLCustomElement {
         console.log('app-task constructor');
 
         this.name = '#number';
+
+        this.addEventListener("click", () => {
+            this.done = !this.done;
+        });
     }
 
     connectedCallback() {
@@ -52,3 +56,4 @@ export default class Task extends HTMLCustomElement {
         }
     }
 };
+window.customElements.define('app-task', Task, {extends: 'button'});

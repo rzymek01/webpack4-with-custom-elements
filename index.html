@@ -21,11 +21,12 @@
 <body>
   <section>
     <h2>Tasks</h2>
+    <button is="app-task">initial button</button>
   </section>
 
   <script type="application/javascript">
-    const task1 = document.createElement('app-task');
-    const task2 = document.createElement('app-task');
+    const task1 = document.createElement('button', {is: 'app-task'});
+    const task2 = document.createElement('button', {is: 'app-task'});
 
     document.body.appendChild(task1);
     document.body.appendChild(task2);

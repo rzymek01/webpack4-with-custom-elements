@@ -1,8 +1,6 @@
 import Task from './task.js';
 
 
-window.customElements.define('app-task', Task);
-
 // const task3 = new (window.customElements.get('app-task'))();
 // const task4 = new Task('#4');
 //
