@@ -1,9 +1,11 @@
 import Task from './task.js';
 
-console.log("Webpack4");
 
-const task1 = new Task();
-const task2 = new Task("primes generator");
+const task3 = new (window.customElements.get('app-task'))('#3');
+const task4 = new Task('#4');
 
-task1.run();
-task2.run();
+document.body.appendChild(task3);
+document.body.appendChild(task4);
+
+task3.done = true;
+task4.done = true;
