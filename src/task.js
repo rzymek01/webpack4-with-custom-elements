@@ -1,13 +1,18 @@
-export default class Task extends HTMLElement {
+// base class to extend, same trick as before
+class HTMLCustomElement extends HTMLElement {
+    constructor(_) { return (_ = super(_)).init(), _; }
+    init() { /* override as you like */ }
+}
+
+export default class Task extends HTMLCustomElement {
     static get observedAttributes() {
         return ['done'];
     }
 
-    constructor(name = '') {
-        super();    // required!
+    init() {
         console.log('app-task constructor');
 
-        this.name = name;
+        this.name = '#number';
     }
 
     connectedCallback() {
@@ -47,4 +52,3 @@ export default class Task extends HTMLElement {
         }
     }
 };
-window.customElements.define('app-task', Task);

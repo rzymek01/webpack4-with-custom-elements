@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --mode production --watch",
-    "start:dev": "webpack --mode development --watch",
+    "start": "webpack --mode production --module-bind js=babel-loader --watch",
+    "start:dev": "webpack --mode development --module-bind js=babel-loader --watch",
     "#run-server-bizarre-delays": "python -m http.server 8000",
     "run-server": "http-server -p 8000",
     "test": "yarn jest"
@@ -15,6 +15,7 @@
     "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-builtin-classes": "^0.6.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

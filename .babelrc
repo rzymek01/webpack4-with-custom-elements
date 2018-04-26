@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "env", {
+        "modules": false,
+        "debug": true
+      }
+    ], "stage-0"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    [
+      "babel-plugin-transform-builtin-classes", {
+        "globals": ["HTMLElement"],
+        "logIfPatched": true
+      }
+    ],
+    "syntax-dynamic-import"
+  ]
+}
